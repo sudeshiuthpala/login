@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/tilte"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/smart_van" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/school_van_management_system" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="115dp"
+        android:layout_height="87dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/image1"
+        app:srcCompat="@drawable/smartvan" />
+
+    <LinearLayout
+        android:layout_width="351dp"
+        android:layout_height="499dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="32dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/loginHeader"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:text="@string/sign_in" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputNic"
+            android:layout_width="307dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp">
+
+
+            <EditText
+                android:id="@+id/loginNic"
+                android:layout_width="289dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/national_identity_card"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColor="#000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            android:layout_width="304dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp">
+
+
+            <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="289dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/forget_password"
+            android:textColor="#039be5" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/login"
+            android:onClick="onLogin"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/don_t_have_an_account"
+            android:textColor="#039be5" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/signup" />
+
+
+    </LinearLayout>
+
+
+    <!--<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="212dp"
+        android:text="@string/hello_world"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="94dp"
+        android:text="@string/log_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+</RelativeLayout>

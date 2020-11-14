@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="351dp"
+        android:layout_height="499dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewDriverReg"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:text="@string/driver_registration"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextTextDriverFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/first_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextDriverMiddleName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/middle_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextDriverLastName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/last_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextTextDriverNic"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/national_identity_card"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/gender" />
+
+        <RadioGroup
+            android:id="@+id/DriverGender"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:id="@+id/DriverMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDriverRadio"
+                android:text="@string/male"
+                tools:ignore="OnClick" />
+
+            <RadioButton
+                android:id="@+id/DriverFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onDriverRadio"
+                android:text="@string/female"
+                tools:ignore="OnClick" />
+        </RadioGroup>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextDriverDob"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="@string/date_of_birth"
+
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextDriverEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/e_mail_address"
+
+                android:importantForAutofill="no"
+
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextDriverPostalAddress"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/address_home_company"
+                android:importantForAutofill="no"
+                android:inputType="textPostalAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextDriverPhone"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/driver_mobile_number"
+                android:importantForAutofill="no"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextOwnerId"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/owner_nic"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextVehicleId"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/vehicle_number"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextDriverLicence"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/driver_licence_number"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                 />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/driverRegBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:onClick="onDriverReg"
+            android:text="@string/driver_submit"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+
+    <!--<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="212dp"
+        android:text="@string/hello_world"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="94dp"
+        android:text="@string/log_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+</ScrollView>
